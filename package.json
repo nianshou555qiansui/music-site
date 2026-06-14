@@ -1,0 +1,20 @@
+{
+  "name": "music-site",
+  "version": "1.0.0",
+  "description": "音乐发现网站",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node -c server.js && node -c db.js && node -c middleware/auth.js && node -c scripts/invite.js && node -c scripts/update-sensitive-words.js && node -c utils/sensitiveWords.js && node -c utils/musicResolver.js && for f in routes/*.js public/js/*.js; do node -c \"$f\" || exit 1; done",
+    "invite": "node scripts/invite.js",
+    "sensitive:update": "node scripts/update-sensitive-words.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "sql.js": "^1.14.1"
+  }
+}

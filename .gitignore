@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+
+# 数据库及备份
+music.db
+music.db.tmp
+backups/
+
+# 环境变量（含真实密钥，切勿提交）
+.env
+
+# 用户上传
+uploads/
+
+# 敏感词库（自动更新，无需入库）
+data/sensitive-words.txt
+data/sensitive-meta.json
+
+# 日志
+*.log
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
